@@ -248,6 +248,8 @@ program
   { fnName: 'setPowerState', paramTypes: ['boolean'], supportsChildId: true },
   { fnName: 'setLedState', paramTypes: ['boolean'], supportsChildId: true },
   { fnName: 'setLocation', paramTypes: ['number', 'number'] },
+  { fnName: 'downloadFirmware', paramTypes: ['string'] },
+  { fnName: 'getDownloadState', paramTypes: ['string'] },
   { fnName: 'reboot', paramTypes: ['number'] },
   { fnName: 'reset', paramTypes: ['number'] },
 ].forEach(command => {

@@ -515,6 +515,42 @@ class Device extends EventEmitter {
       sendOptions
     );
   }
+
+  /**
+   * Download firmware.
+   *
+   * Sends `system.download_firmware` command. Does not support childId.
+   * @param  {url}       url
+   * @param  {SendOptions} [sendOptions]
+   * @return {Promise<Object, ResponseError>} parsed JSON response
+   */
+  async downloadFirmware(url, sendOptions) {
+    return this.sendCommand(
+      {
+        [this.apiModuleNamespace.system]: { download_firmware: { url } },
+      },
+      null,
+      sendOptions
+    );
+  }
+
+  /**
+   * Get download state.
+   *
+   * Sends `system.get_download_state` command. Does not support childId.
+   * @param  {SendOptions} [sendOptions]
+   * @return {Promise<Object, ResponseError>} parsed JSON response
+   */
+  async getDownloadState(url, sendOptions) {
+    return this.sendCommand(
+      {
+        [this.apiModuleNamespace.system]: { get_download_state: { } },
+      },
+      null,
+      sendOptions
+    );
+  }
+
 }
 
 module.exports = Device;
