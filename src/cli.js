@@ -246,6 +246,7 @@ program
   { fnName: 'setAlias', supportsChildId: true },
   { fnName: 'getModel', supportsChildId: true },
   { fnName: 'setPowerState', paramTypes: ['boolean'], supportsChildId: true },
+  { fnName: 'setLedState', paramTypes: ['boolean'], supportsChildId: true },
   { fnName: 'setLocation', paramTypes: ['number', 'number'] },
   { fnName: 'reboot', paramTypes: ['number'] },
   { fnName: 'reset', paramTypes: ['number'] },
